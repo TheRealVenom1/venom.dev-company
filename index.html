@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>venom.dev | شركة برمجة</title>
+    <title>venom.dev | Programming Company</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+        <button onclick="switchLanguage('en')" id="btn-en" class="active">EN</button>
+        <button onclick="switchLanguage('ar')" id="btn-ar">AR</button>
+    </div>
+
     <!-- Hero Section -->
     <header class="hero">
         <nav class="navbar">
@@ -16,21 +22,21 @@
                 <h1>venom.<span>dev</span></h1>
             </div>
             <ul>
-                <li><a href="#services">خدماتنا</a></li>
-                <li><a href="#languages">اللغات</a></li>
-                <li><a href="#contact">تواصل</a></li>
+                <li><a href="#services" class="nav-link" data-en="Services" data-ar="خدماتنا">Services</a></li>
+                <li><a href="#languages" class="nav-link" data-en="Languages" data-ar="اللغات">Languages</a></li>
+                <li><a href="#contact" class="nav-link" data-en="Contact" data-ar="تواصل">Contact</a></li>
             </ul>
         </nav>
 
         <div class="hero-content">
             <div class="hero-text">
                 <h1>venom.<span class="highlight">dev</span></h1>
-                <h2>شركة برمجة محترفة</h2>
-                <p class="tagline">نحول أفكارك إلى واقع رقمي قوي ومميز</p>
+                <h2 id="hero-subtitle">Professional Programming Company</h2>
+                <p id="hero-tagline" class="tagline">We turn your ideas into powerful digital realities</p>
                 
                 <div class="cta-buttons">
-                    <a href="#contact" class="btn primary">ابدأ مشروعك الآن</a>
-                    <a href="#services" class="btn secondary">شاهد خدماتنا</a>
+                    <a href="#contact" class="btn primary" id="cta1">Start Your Project</a>
+                    <a href="#services" class="btn secondary" id="cta2">Our Services</a>
                 </div>
             </div>
             
@@ -47,21 +53,21 @@
     <!-- About -->
     <section class="about">
         <div class="container">
-            <h2>أهلاً بكم في Venom.dev</h2>
-            <p>نحن شركة برمجة كبيرة بخبرة أكثر من <strong>6 سنين</strong> في مجال التطوير الرقمي. نقدم حلول برمجية متكاملة بأعلى مستويات الجودة والاحترافية.</p>
+            <h2 id="about-title">Welcome to Venom.dev</h2>
+            <p id="about-text">We are a large programming company with over <strong>6 years</strong> of experience in digital development. We provide complete software solutions with the highest levels of quality and professionalism.</p>
             
             <div class="stats">
                 <div class="stat-item">
                     <h3>150+</h3>
-                    <p>مشروع مكتمل</p>
+                    <p id="stat1">Projects Completed</p>
                 </div>
                 <div class="stat-item">
                     <h3>6</h3>
-                    <p>سنوات خبرة</p>
+                    <p id="stat2">Years Experience</p>
                 </div>
                 <div class="stat-item">
                     <h3>98%</h3>
-                    <p>رضا العملاء</p>
+                    <p id="stat3">Client Satisfaction</p>
                 </div>
             </div>
         </div>
@@ -70,37 +76,37 @@
     <!-- Services -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">خدماتنا</h2>
+            <h2 class="section-title" id="services-title">Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <i class="fas fa-globe"></i>
-                    <h3>تطوير مواقع</h3>
-                    <p>مواقع احترافية، متاجر إلكترونية، ومنصات معقدة</p>
+                    <h3 id="s1">Website Development</h3>
+                    <p id="s1p">Professional websites, e-commerce, and complex platforms</p>
                 </div>
                 <div class="service-card">
                     <i class="fab fa-discord"></i>
-                    <h3>بوتات Discord</h3>
-                    <p>بوتات متقدمة بكل الخصائص اللي تحتاجها</p>
+                    <h3 id="s2">Discord Bots</h3>
+                    <p id="s2p">Advanced bots with all the features you need</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-paint-brush"></i>
-                    <h3>تصميم UI/UX</h3>
-                    <p>تصميمات عصرية وجذابة تجذب المستخدمين</p>
+                    <h3 id="s3">UI/UX Design</h3>
+                    <p id="s3p">Modern and attractive designs that attract users</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-mobile-alt"></i>
-                    <h3>تطبيقات موبايل</h3>
-                    <p>تطبيقات iOS و Android بتقنيات حديثة</p>
+                    <h3 id="s4">Mobile Applications</h3>
+                    <p id="s4p">iOS & Android apps with latest technologies</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-cloud"></i>
-                    <h3>حلول سحابية</h3>
-                    <p>سيرفرات، قواعد بيانات، وأنظمة متكاملة</p>
+                    <h3 id="s5">Cloud Solutions</h3>
+                    <p id="s5p">Servers, databases, and integrated systems</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-gamepad"></i>
-                    <h3>ألعاب وبرامج</h3>
-                    <p>أي فكرة تتخيلها.. بننفذها</p>
+                    <h3 id="s6">Games & Software</h3>
+                    <p id="s6p">Anything you can imagine.. We implement it</p>
                 </div>
             </div>
         </div>
@@ -109,7 +115,7 @@
     <!-- Programming Languages -->
     <section id="languages" class="languages">
         <div class="container">
-            <h2 class="section-title">نتقن كل لغات البرمجة</h2>
+            <h2 class="section-title" id="lang-title">We Master All Programming Languages</h2>
             <div class="langs-grid">
                 <span class="lang">Python</span>
                 <span class="lang">JavaScript</span>
@@ -130,35 +136,26 @@
                 <span class="lang">React / Next.js</span>
                 <span class="lang">Node.js</span>
             </div>
-            <p class="note">وأي تقنية جديدة تطلع.. بنتعلمها في يومين 😎</p>
+            <p class="note" id="note">Any new technology that appears.. We learn it in two days 😎</p>
         </div>
     </section>
 
     <!-- Slogan -->
     <section class="slogan">
         <div class="container">
-            <h2>"السم قوي.. والكود أقوى"</h2>
-            <p>Venom.dev - نصنع السم الرقمي اللي يقتل المنافسة</p>
+            <h2 id="slogan">"The venom is strong.. The code is stronger"</h2>
+            <p id="slogan-sub">Venom.dev - We create digital venom that kills the competition</p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
-            <h2>تابعنا</h2>
+            <h2 id="follow">Follow Us</h2>
             <div class="social-links">
-                <a href="https://www.youtube.com/@venom.dev.company0" class="social-btn youtube">
-                    <i class="fab fa-youtube"></i>
-                    <span>YouTube</span>
-                </a>
-                <a href="https://tiktok.com/@venom.dev.company" class="social-btn tiktok">
-                    <i class="fab fa-tiktok"></i>
-                    <span>TikTok</span>
-                </a>
-                <a href="https://discord.gg/8JBVtaKjKT" class="social-btn discord">
-                    <i class="fab fa-discord"></i>
-                    <span>Discord</span>
-                </a>
+                <a href="https://www.youtube.com/@venom.dev.company0" class="social-btn youtube"><i class="fab fa-youtube"></i><span>YouTube</span></a>
+                <a href="https://tiktok.com/@venom.dev.company" class="social-btn tiktok"><i class="fab fa-tiktok"></i><span>TikTok</span></a>
+                <a href="https://discord.gg/8JBVtaKjKT" class="social-btn discord"><i class="fab fa-discord"></i><span>Discord</span></a>
             </div>
             
             <div class="footer-bottom">
@@ -166,5 +163,57 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function switchLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
+
+            if (lang === 'ar') {
+                document.getElementById('hero-subtitle').textContent = 'شركة برمجة محترفة';
+                document.getElementById('hero-tagline').textContent = 'نحول أفكارك إلى واقع رقمي قوي ومميز';
+                document.getElementById('cta1').textContent = 'ابدأ مشروعك الآن';
+                document.getElementById('cta2').textContent = 'شاهد خدماتنا';
+                
+                document.getElementById('about-title').textContent = 'أهلاً بكم في Venom.dev';
+                document.getElementById('about-text').innerHTML = 'نحن شركة برمجة كبيرة بخبرة أكثر من <strong>6 سنين</strong> في مجال التطوير الرقمي. نقدم حلول برمجية متكاملة بأعلى مستويات الجودة والاحترافية.';
+                
+                document.getElementById('stat1').textContent = 'مشروع مكتمل';
+                document.getElementById('stat2').textContent = 'سنوات خبرة';
+                document.getElementById('stat3').textContent = 'رضا العملاء';
+                
+                document.getElementById('services-title').textContent = 'خدماتنا';
+                document.getElementById('lang-title').textContent = 'نتقن كل لغات البرمجة';
+                document.getElementById('note').textContent = 'وأي تقنية جديدة تطلع.. بنتعلمها في يومين 😎';
+                
+                document.getElementById('slogan').textContent = '"السم قوي.. والكود أقوى"';
+                document.getElementById('slogan-sub').textContent = 'Venom.dev - نصنع السم الرقمي اللي يقتل المنافسة';
+                document.getElementById('follow').textContent = 'تابعنا';
+            } else {
+                document.getElementById('hero-subtitle').textContent = 'Professional Programming Company';
+                document.getElementById('hero-tagline').textContent = 'We turn your ideas into powerful digital realities';
+                document.getElementById('cta1').textContent = 'Start Your Project';
+                document.getElementById('cta2').textContent = 'Our Services';
+                
+                document.getElementById('about-title').textContent = 'Welcome to Venom.dev';
+                document.getElementById('about-text').innerHTML = 'We are a large programming company with over <strong>6 years</strong> of experience in digital development. We provide complete software solutions with the highest levels of quality and professionalism.';
+                
+                document.getElementById('stat1').textContent = 'Projects Completed';
+                document.getElementById('stat2').textContent = 'Years Experience';
+                document.getElementById('stat3').textContent = 'Client Satisfaction';
+                
+                document.getElementById('services-title').textContent = 'Our Services';
+                document.getElementById('lang-title').textContent = 'We Master All Programming Languages';
+                document.getElementById('note').textContent = 'Any new technology that appears.. We learn it in two days 😎';
+                
+                document.getElementById('slogan').textContent = '"The venom is strong.. The code is stronger"';
+                document.getElementById('slogan-sub').textContent = 'Venom.dev - We create digital venom that kills the competition';
+                document.getElementById('follow').textContent = 'Follow Us';
+            }
+        }
+    </script>
 </body>
-</html>
+    </html>
