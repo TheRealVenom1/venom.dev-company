@@ -72,6 +72,36 @@ body {
     color: #00ff9d;
 }
 
+/* Language Switcher */
+.lang-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1100;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 6px;
+    border-radius: 50px;
+    border: 1px solid #00ff9d33;
+    display: flex;
+    gap: 5px;
+}
+
+.lang-switcher button {
+    padding: 8px 18px;
+    border: none;
+    background: transparent;
+    color: #aaa;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lang-switcher button.active {
+    background: #00ff9d;
+    color: black;
+}
+
 /* Hero */
 .hero {
     min-height: 100vh;
@@ -290,4 +320,8 @@ body {
     .hero-text h1 {
         font-size: 3rem;
     }
-}
+    .lang-switcher {
+        top: 15px;
+        right: 15px;
+    }
+    }
